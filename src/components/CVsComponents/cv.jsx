@@ -97,13 +97,13 @@ export default function CV({cv}) {
 
   return (
     <div className="flex flex-col justify-center items-center my-12">
-      <div className="page-container w-[1025px]">
+      <div className="page-container w-[250px] md:w-[625px] lg:w-[1025px]">
         {!editMode ? (
           <div id='cv-info' className="cv-info flex flex-col justify-center items-center w-full">
             <h2 className="text-3xl">{fullName}</h2>
             <div className="section border w-full border-white my-4">
               <div className="w-full text-xl text-black bg-[color:hsl(0,_0%,_80%)]">Personal Info</div>
-              <div className="info-container flex justify-evenly w-full">
+              <div className="info-container flex flex-col md:flex-row lg:flex-row justify-evenly w-full">
                 <div className="details flex justify-items-start p-4 w-full">
                   <div className="keys flex flex-col gap-6 w-[40%]">
                     <p>Full Name: </p>
@@ -143,7 +143,7 @@ export default function CV({cv}) {
               <h2 className="text-3xl"></h2>
               <div className="section border w-full border-white my-4">
                 <div className="w-full text-xl text-black bg-[color:hsl(0,_0%,_80%)]">Personal Info</div>
-                <div className="info-container flex justify-evenly w-full">
+                <div className="info-container flex flex-col md:flex-row lg:flex-row justify-evenly w-full">
                   <div className="details flex justify-items-start p-4 w-full">
                     <div className="keys flex flex-col gap-10 w-[40%] justify-center">
                       <p>Full Name: </p>

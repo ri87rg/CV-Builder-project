@@ -26,15 +26,14 @@ export default function SignInPage() {
   })
 
   return <div className={`flex justify-center items-center h-[calc(100vh_-_92.4px)]`}>
-    <div className={`border-2 border-white w-[750px] h-[470px] rounded-2xl`}>
-
+    <div className={`border-2 border-white h-[470px] rounded-2xl w-[400px] md:w-[550px] lg:w-[750px]`}>
       <div className="w-full flex justify-evenly flex-row">
         <Button func={() => setViewContent("sign-in")} text={`Sign in`} additionalClasses={`w-full m-3 text-[20px] ${viewContent == 'sign-in' && "glow-effect"}`}></Button>
         <Button func={() => setViewContent('Register')} text={`Register`} additionalClasses={`w-full m-3 text-[20px] ${viewContent == 'Register' && "glow-effect"}`}></Button>
       </div>
 
         <div className=' h-[calc(100%_-_62.5px)] flex justify-center items-center'>
-          <div className="m-4 w-[515px] h-[330px]">
+          <div className="m-4 w-[215px] md:w-[300px] lg:w-[515px] h-[330px]">
         {viewContent == 'sign-in' ? (
               <form onSubmit={handleSubmit} onReset={handleReset}>
                 <label>Username</label>

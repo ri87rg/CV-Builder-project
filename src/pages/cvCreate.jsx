@@ -152,9 +152,9 @@ export default function CVPage() {
   }, [errors, index])
   
   return <div className={`flex justify-center items-center h-[calc(100vh_-_92.4px)]`}>
-      <div className={`border-2 border-white w-[750px] h-[470px] rounded-2xl`}>
+      <div className={`border-2 border-white h-[470px] rounded-2xl w-[400px] md:w-[550px] lg:w-[750px]`}>
         <div className='box-container h-full flex flex-col justify-center items-center'>
-          <div className="form-container my-2 w-[515px]">
+          <div className="form-container my-2 w-[215px] md:w-[300px] lg:w-[515px]">
             <form onSubmit={handleSubmit}>
 
               {wizardSlides[index]}
@@ -166,7 +166,7 @@ export default function CVPage() {
               }
             </form>
           </div>
-          <div className="btns-container flex flex-row justify-center items-center gap-3 my-2 w-[515px]">
+          <div className="btns-container flex flex-row justify-center items-center gap-3 my-2 w-[215px] md:w-[300px] lg:w-[515px]">
             {index !== 0 && 
               <Button func={() => {setIndex((index - 1) % wizardSlides.length)}} additionalClasses="w-full bg-[color:hsl(0,_0%,_20%)] text-white">Previous</Button>
             }
