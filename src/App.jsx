@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/navbar-components/Navbar";
+import Navbar from "./components/navbarComponents/Navbar";
 import './styling/App.css'
 
 import Home from './pages/home'
@@ -9,7 +9,7 @@ import SignInPage from "./pages/signInPage"
 import CVPage from "./pages/cvCreate";
 import CVsPage from './pages/cv_s'
 import { useCVStore } from "./store/cvStore";
-import CV from './components/CVs-components/cv'
+import CV from './components/CVsComponents/cv'
 
 function App() {
   const {CVs} = useCVStore()
