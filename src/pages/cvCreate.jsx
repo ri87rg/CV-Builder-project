@@ -1,5 +1,5 @@
 import { useFormik } from "formik";
-import Button from "../components/customButton";
+import CustomButton from "../components/customButton";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useNotificationStore } from "../store/notificationsStore";
@@ -168,10 +168,10 @@ export default function CVPage() {
           </div>
           <div className="btns-container flex flex-row justify-center items-center gap-3 my-2 w-[215px] md:w-[300px] lg:w-[515px]">
             {index !== 0 && 
-              <Button func={() => {setIndex((index - 1) % wizardSlides.length)}} additionalClasses="w-full bg-[color:hsl(0,_0%,_20%)] text-white">Previous</Button>
+              <CustomButton func={() => {setIndex((index - 1) % wizardSlides.length)}} additionalClasses="w-full bg-[color:hsl(0,_0%,_20%)] text-white">Previous</CustomButton>
             }
             {index !== wizardSlides.length - 1 && isSlideValid &&
-              <Button func={() => {setIndex((index + 1) % wizardSlides.length)}} additionalClasses="w-full bg-[color:hsl(0,_0%,_20%)] text-white">Next</Button>
+              <CustomButton func={() => {setIndex((index + 1) % wizardSlides.length)}} additionalClasses="w-full bg-[color:hsl(0,_0%,_20%)] text-white">Next</CustomButton>
             }
           </div>
         </div>

@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { useAccountStore } from '../store/accountInfo'
 import { useAccountValidation } from '../schemas/signInSchema'
 
-import Button from "../components/customButton"
+import CustomButton from "../components/customButton"
 
 export default function SignInPage() {
   const navigate = useNavigate()
@@ -28,8 +28,8 @@ export default function SignInPage() {
   return <div className={`flex justify-center items-center h-[calc(100vh_-_92.4px)]`}>
     <div className={`border-2 border-white h-[470px] rounded-2xl w-[400px] md:w-[550px] lg:w-[750px]`}>
       <div className="w-full flex justify-evenly flex-row">
-        <Button func={() => setViewContent("sign-in")} text={`Sign in`} additionalClasses={`w-full m-3 text-[20px] ${viewContent == 'sign-in' && "glow-effect"}`}></Button>
-        <Button func={() => setViewContent('Register')} text={`Register`} additionalClasses={`w-full m-3 text-[20px] ${viewContent == 'Register' && "glow-effect"}`}></Button>
+        <CustomButton func={() => setViewContent("sign-in")} text={`Sign in`} additionalClasses={`w-full m-3 text-[20px] ${viewContent == 'sign-in' && "glow-effect"}`}></CustomButton>
+        <CustomButton func={() => setViewContent('Register')} text={`Register`} additionalClasses={`w-full m-3 text-[20px] ${viewContent == 'Register' && "glow-effect"}`}></CustomButton>
       </div>
 
         <div className=' h-[calc(100%_-_62.5px)] flex justify-center items-center'>

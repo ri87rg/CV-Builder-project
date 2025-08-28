@@ -3,7 +3,7 @@ import { useNotificationStore } from '../store/notificationsStore'
 import { useAccountStore } from '../store/accountInfo'
 
 import SectionHeader from '../components/sectionHeader'
-import Button from '../components/customButton'
+import CustomButton from '../components/customButton'
 
 import '../styles/effects.css'
 
@@ -39,7 +39,7 @@ function Home() {
           <br />reaching 
           <span className='text-cyan-600 glow-effect'> 1000+ client </span>over the years</p>
         <div className="btns-container flex gap-2 my-4">
-          <Button func={() => handleSignIn()} text={`Create Your Own CV Now!`} additionalClasses='animate-glow' />
+          <CustomButton func={() => handleSignIn()} text={`Create Your Own CV Now!`} additionalClasses='animate-glow' />
         </div>
       </div>
     </div> 

@@ -8,7 +8,7 @@ import { useCVInfoValidation } from '../../schemas/cvSchema'
 import { useCVStore } from '../../store/cvStore'
 import { useNotificationStore } from '../../store/notificationsStore'
 
-import Button from '../customButton'
+import CustomButton from '../customButton'
 
 export default function CV({cv}) {
   const {fullName, age, email, phoneNumber, image, skills, id} = cv 
@@ -218,7 +218,7 @@ export default function CV({cv}) {
                         onChange={handleInputChange}
                         className="bg-[color:hsl(0,_0%,_20%)] h-fit !w-[70%]"
                       />
-                      <Button 
+                      <CustomButton 
                         text={"Remove Image"} 
                         additionalClasses='text-sm text-red-400 hover:text-red-600'
                         type={"button"}
@@ -263,13 +263,13 @@ export default function CV({cv}) {
         <div className="btns-container flex justify-end items-center gap-3 w-full">
           {!editMode ? (
             <>
-              <Button text={"Download"} func={() => {downloadPDF()}} />
-              <Button text={"Edit"} func={() => setEditMode(!editMode)} />
+              <CustomButton text={"Download"} func={() => {downloadPDF()}} />
+              <CustomButton text={"Edit"} func={() => setEditMode(!editMode)} />
             </>
           ) : (
             <>
-              {isValidForm && <Button text={"Done"} func={() => handleSubmit()} type={"submit"} />}
-              <Button text={"Cancel"} func={() => {
+              {isValidForm && <CustomButton text={"Done"} func={() => handleSubmit()} type={"submit"} />}
+              <CustomButton text={"Cancel"} func={() => {
                 setEditMode(!editMode)
                 handleReset()
               }} />

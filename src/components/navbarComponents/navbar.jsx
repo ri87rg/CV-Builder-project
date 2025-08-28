@@ -3,7 +3,7 @@ import { useAccountStore } from '../../store/accountInfo'
 import { useNavigate } from 'react-router-dom'
 import { useNotificationStore } from "../../store/notificationsStore"
 
-import Button from '../customButton'
+import CustomButton from '../customButton'
 
 
 export default function Navbar() {
@@ -41,18 +41,18 @@ export default function Navbar() {
       ">
         <Link to='/' className="px-2">CV Builder</Link>
         <div className="flex gap-3">
-          <Button 
+          <CustomButton 
             func={() => navigate('/')} 
             customStyle="py-1 px-2 hover:bg-[#d4d4d4] hover:text-black rounded-2xl transition-all duration-300"
             text={"Home"} 
           />
-          <Button 
+          <CustomButton 
             func={() => handleNavigating('/cv')} 
             customStyle="py-1 px-2 hover:bg-[#d4d4d4] hover:text-black rounded-2xl transition-all duration-300"
             text={"CV's"} 
           />
         </div>
-        <Button func={() => handleSignIn()} text={isSignedIn() ? "Sign out" : "Sign in"} customStyle={`
+        <CustomButton func={() => handleSignIn()} text={isSignedIn() ? "Sign out" : "Sign in"} customStyle={`
           py-2 px-5 rounded-2xl border-2 text-black cursor-pointer 
           border-transparent bg-[#d4d4d4] 
           hover:bg-transparent hover:border-white ${isSignedIn() ? "hover:text-red-500" : "hover:text-white"}

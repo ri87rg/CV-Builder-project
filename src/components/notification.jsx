@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import Button from './customButton'
+import CustomButton from './customButton'
 
 function Notification({title, description, showPreview=false, path, onClose }) {
   const navigate = useNavigate()
@@ -48,7 +48,7 @@ function Notification({title, description, showPreview=false, path, onClose }) {
           </div>
           <div className="btns-container flex flex-row justify-center">
             {showPreview && 
-              <Button 
+              <CustomButton 
                 func={() => {
                   navigate(path)
                   handleClose()
@@ -59,7 +59,7 @@ function Notification({title, description, showPreview=false, path, onClose }) {
                 } 
               />
             }
-            <Button 
+            <CustomButton 
               text={"Dismiss"} 
               customStyle={
                 "text-[white] w-[130px] h-[30px] bg-[#383845] rounded-[8px] mr-2 cursor-pointer pointer-events-auto"

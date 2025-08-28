@@ -1,4 +1,4 @@
-import Button from "../customButton"
+import CustomButton from "../customButton"
 import { useCVStore } from "../../store/cvStore"
 import { useNavigate } from "react-router-dom"
 
@@ -12,8 +12,8 @@ export default function CVPreview({cv}) {
         <p>Age: {cv.age}</p>
         <p>E-mail: <br />{cv.email}</p>
         <div className="btns-container flex flex-row justify-center mt-4 gap-4">
-          <Button func={() => {naviagte(`/cv/display/${cv.id}`)}} text={"Review"} />
-          <Button func={() => {removeCV(cv.id)}} text={"Delete"} />
+          <CustomButton func={() => {naviagte(`/cv/display/${cv.id}`)}} text={"Review"} />
+          <CustomButton func={() => {removeCV(cv.id)}} text={"Delete"} />
         </div>
       </div>
     </div>
