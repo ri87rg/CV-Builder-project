@@ -1,5 +1,5 @@
 import { useCVStore } from "../store/cvStore"
-import CVPreview from "../components/CVs-components/cvPreview"
+import CVPreview from "../components/CVsComponents/cvPreview"
 
 export default function CVsPage() {
   const {CVs} = useCVStore()
