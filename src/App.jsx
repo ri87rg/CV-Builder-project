@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbarComponents/navbar";
-import './styling/App.css'
 
 import Home from './pages/home'
 import NotificationsContainer from "./components/notificationsContainer";

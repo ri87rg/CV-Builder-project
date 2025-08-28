@@ -5,7 +5,7 @@ import { useAccountStore } from '../store/accountInfo'
 import SectionHeader from '../components/sectionHeader'
 import Button from '../components/customButton'
 
-import '../styling/effects.css'
+import '../styles/effects.css'
 
 function Home() {
   const {addNotification} = useNotificationStore()
