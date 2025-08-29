@@ -6,9 +6,26 @@ import { useNotificationStore } from "../store/notificationsStore";
 import { useCVInfoValidation } from "../schemas/cvSchema";
 import { useCVStore } from "../store/cvStore";
 
+import {useAccountStore} from "../store/accountInfo"
+
 export default function CVPage() {
   const {addNotification} = useNotificationStore()
   const navigate = useNavigate()
+  const { account, isSignedIn } = useAccountStore()
+  
+  useEffect(() => {
+    if (!isSignedIn()) {
+      addNotification(
+        {
+          title: "Unauthorized",
+          description: "Please sign in to create new CVs.",
+        },
+        false
+      )
+      navigate("/sign-in")
+    }
+  }, [isSignedIn, navigate, addNotification, account])
+
   const {addCV} = useCVStore()
 
   const [hasInteracted, setHasInteracted] = useState(false)
