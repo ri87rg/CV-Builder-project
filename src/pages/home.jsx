@@ -1,18 +1,17 @@
+import { Button } from '../components/ui/button'
+
 import { useNavigate } from 'react-router-dom'
 import { useNotificationStore } from '../store/notificationsStore'
 import { useAccountStore } from '../store/accountInfo'
 
 import SectionHeader from '../components/sectionHeader'
-import CustomButton from '../components/customButton'
-
-import '../styles/effects.css'
 
 function Home() {
   const {addNotification} = useNotificationStore()
   const {isSignedIn, setRedirectionPath} = useAccountStore()
   const navigate = useNavigate()
 
-  function handleSignIn() {
+  function handleCreateCV() {
     if (isSignedIn()) {
       navigate('/cv/create')
       setRedirectionPath('/')
@@ -39,7 +38,7 @@ function Home() {
           <br />reaching 
           <span className='text-cyan-600 glow-effect'> 1000+ client </span>over the years</p>
         <div className="btns-container flex gap-2 my-4">
-          <CustomButton func={() => handleSignIn()} text={`Create Your Own CV Now!`} additionalClasses='animate-glow' />
+          <Button onClick={handleCreateCV}>Create Your Own CV Now!</Button>
         </div>
       </div>
     </div> 
