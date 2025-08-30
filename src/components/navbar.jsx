@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom"
-import { useAccountStore } from '../../store/accountInfo'
+import { useAccountStore } from '../store/accountInfo'
 import { useNavigate } from 'react-router-dom'
-import { useNotificationStore } from "../../store/notificationsStore"
+import { useNotificationStore } from "../store/notificationsStore"
 import { useState } from "react"
 
-import CustomButton from '../customButton'
-import { Button } from '../ui/button'
+import { Button } from './ui/button'
 
 export default function Navbar() {
   const handleClick = () => {

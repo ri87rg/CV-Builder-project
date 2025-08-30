@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/navbarComponents/navbar";
+import Navbar from "./components/navbar";
 
 import Home from './pages/home'
 import NotificationsContainer from "./components/notificationsContainer";
